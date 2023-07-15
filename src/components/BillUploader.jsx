@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Button, CircularProgress, Snackbar, TextField } from '@mui/material';
+import { Box, Button, CircularProgress, Snackbar, TextField, Typography } from '@mui/material';
 import styled from '@emotion/styled';
 
 const Main = styled(Box)`
@@ -97,14 +97,7 @@ const BillUploader = () => {
 
   return (
     <Main>
-      <TextField
-        label="Select PDF File"
-        type="text"
-        value={selectedFile ? selectedFile.name : ''}
-        InputProps={{
-          readOnly: true,
-        }}
-      />
+      <Typography>Select File</Typography>
       <label htmlFor="file-input">
         <FileInput id="file-input" type="file" accept="application/pdf" onChange={handleFileChange} />
         <Button component="span" variant="contained" color="primary">
